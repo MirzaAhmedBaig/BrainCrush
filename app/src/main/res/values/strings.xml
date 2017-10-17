@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BrainCrush</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="about">Version 1.0.0\nDeveloped by: Mirza Ahmed Baig\nEmail: mirzaahmed65@gmail.com</string>
 </resources>

@@ -1,18 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baseContext"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="braincrush.mirza.com.braincrush.MainActivity">
+    android:background="@drawable/back1"
+    tools:context="braincrush.mirza.com.braincrush.activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/round"
+            android:text="BRAIN CRUSH"
+            android:textColor="@color/black"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/round"
+            android:text="HOW FAST IS YOUR BRAIN?"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/single"
+            android:layout_width="165dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/mybutton"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawableStart="@drawable/ic_user"
+            android:fontFamily="@font/round"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Singleplayer"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/multi"
+            android:layout_width="165dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/single"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/mybutton"
+            android:drawableLeft="@drawable/ic_users"
+            android:drawableStart="@drawable/ic_users"
+            android:fontFamily="@font/round"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Multiplayer"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="165dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/multi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/mybutton"
+            android:drawableLeft="@drawable/ic_settings"
+            android:drawableStart="@drawable/ic_settings"
+            android:fontFamily="@font/round"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+
+        <ImageButton
+            android:id="@+id/like_btn"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/settings"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_view"
+            android:src="@drawable/ic_like" />
+
+        <ImageButton
+            android:id="@+id/share_btn"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/settings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/rounded_view"
+            android:src="@drawable/ic_share" />
+
+        <ImageButton
+            android:id="@+id/info_btn"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/settings"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_view"
+            android:src="@drawable/ic_info" />
+    </RelativeLayout>
+
+
+</FrameLayout>
