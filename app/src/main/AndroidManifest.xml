@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".activities.SplashScreenActivity"
             android:theme="@style/SplashTheme">
@@ -21,7 +21,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SinglePlayerActivity"></activity>
+        <activity
+            android:name=".activities.SinglePlayerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.LevelOneActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activities.Levels.LevelOneActivity" />
+        <activity android:name=".activities.Levels.LevelTwoActivity" />
+        <activity android:name=".activities.Levels.LevelThreeActivity" />
+        <activity android:name=".activities.Levels.LevelFourActivity"></activity>
     </application>
 
 </manifest>

@@ -14,79 +14,80 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/round"
-            android:text="BRAIN CRUSH"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="38sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
+            android:layout_below="@+id/title"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/round"
-            android:text="HOW FAST IS YOUR BRAIN?"
+            android:text="@string/sub_head"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
 
         <Button
-            android:id="@+id/single"
+            android:id="@+id/single_player"
             android:layout_width="165dp"
             android:layout_height="45dp"
-            android:layout_below="@+id/textView3"
+            android:layout_below="@+id/desc"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:background="@drawable/mybutton"
             android:drawableLeft="@drawable/ic_user"
             android:drawableStart="@drawable/ic_user"
             android:fontFamily="@font/round"
-            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:text="Singleplayer"
+            android:text="@string/single_player"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/multi"
+            android:id="@+id/multi_player"
             android:layout_width="165dp"
             android:layout_height="45dp"
-            android:layout_below="@+id/single"
+            android:layout_below="@+id/single_player"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
             android:background="@drawable/mybutton"
             android:drawableLeft="@drawable/ic_users"
             android:drawableStart="@drawable/ic_users"
             android:fontFamily="@font/round"
-            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:text="Multiplayer"
+            android:text="@string/multi_player"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/settings"
+            android:id="@+id/settings_btn"
             android:layout_width="165dp"
             android:layout_height="45dp"
-            android:layout_below="@+id/multi"
+            android:layout_below="@+id/multi_player"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
             android:background="@drawable/mybutton"
             android:drawableLeft="@drawable/ic_settings"
             android:drawableStart="@drawable/ic_settings"
             android:fontFamily="@font/round"
-            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="18sp" />
@@ -98,21 +99,23 @@
             android:layout_height="65dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/settings"
+            android:layout_below="@+id/settings_btn"
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_view"
+            android:contentDescription="@string/like_button"
             android:src="@drawable/ic_like" />
 
         <ImageButton
             android:id="@+id/share_btn"
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:layout_below="@+id/settings"
+            android:layout_below="@+id/settings_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="45dp"
             android:background="@drawable/rounded_view"
+            android:contentDescription="@string/share_button"
             android:src="@drawable/ic_share" />
 
         <ImageButton
@@ -121,11 +124,12 @@
             android:layout_height="65dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/settings"
+            android:layout_below="@+id/settings_btn"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_view"
+            android:contentDescription="@string/info_button"
             android:src="@drawable/ic_info" />
     </RelativeLayout>
 
