@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="braincrush.mirza.com.braincrush">
 
+    <uses-permission android:name="android.permission.SET_ALARM" />
+
     <application
+        android:name=".utils.GameApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_brain"
         android:label="@string/app_name"
@@ -11,10 +14,47 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".activities.SplashScreenActivity"
             android:theme="@style/SplashTheme">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activities.SinglePlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.Levels.LevelOneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.Levels.LevelTwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.Levels.LevelThreeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.Levels.LevelFourActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activities.Levels.LevelFiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".DummyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,15 +62,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SinglePlayerActivity"
+            android:name=".activities.Levels.LevelSevenActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".activities.LevelOneActivity"
+            android:name=".activities.Levels.LevelSixActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".activities.Levels.LevelOneActivity" />
-        <activity android:name=".activities.Levels.LevelTwoActivity" />
-        <activity android:name=".activities.Levels.LevelThreeActivity" />
-        <activity android:name=".activities.Levels.LevelFourActivity"></activity>
+
     </application>
 
 </manifest>

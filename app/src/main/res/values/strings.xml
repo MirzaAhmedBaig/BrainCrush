@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Brain Crush</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="about">Version 1.0.0\nDeveloped by: Mirza Ahmed Baig\nEmail: mirzaahmed65@gmail.com</string>
     <string name="sub_head">HOW FAST IS YOUR BRAIN?</string>
     <string name="single_player">Single Player</string>
@@ -12,13 +11,32 @@
 
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="info_text">Version : 1.0.0\nDeveloped by : Mirza Ahmed Baig\nEmail : mirzaahmed65@gmail.com\nWebsite : www.mirzaahmed.tk</string>
     <string name="start">Start</string>
     <string name="level_1">LEVEL 1</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_text">Version : 1.0.0\nDeveloped by : Mirza Ahmed Baig\nEmail : mirzaahmed65@gmail.com\nWebsite : www.mirzaahmed.tk</string>
+
     <string name="image">image</string>
     <string name="_0">0</string>
     <string name="image_button">image_button</string>
+    <string name="find_and_tap_the_number_1">Find and tap the number 1</string>
+    <string name="tap_to_continue">Tap to continue</string>
+    <string name="congrats">CONGRATS!</string>
+    <string name="be_faster_for_more_stars">Be faster for more stars!</string>
+    <string name="round_1_of_4">Round 1 of 4</string>
+    <string name="oops_try_again">Oops&#8230;! Try again!</string>
+    <string name="you_tapped_the_wrong_number">You tapped the wrong number</string>
+    <string name="come_on_you_can_don_it">Come on! You can don it!</string>
+    <string name="game_paused">Game Paused</string>
+    <string name="resume">Resume</string>
+    <string name="restart">Restart</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="level_x">Level -1</string>
+    <string name="check">Check</string>
+    <string name="_1_2_3_4_5_6">1+2/3*4-5*6</string>
+    <string name="_89">89</string>
+    <string name="c">C</string>
+    <string name="Reset">Reset</string>
+    <string name="submit">Submit</string>
+    <string name="undo">Undo</string>
 </resources>

@@ -1,10 +1,12 @@
 package braincrush.mirza.com.braincrush.models
 
 import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
 
-data class ScoreModel(
-        var levelNumber: Int = 0,
-        var levelScore: Float = 0f,
-        var thumbnail: Int = 0,
-        var isLocked: Boolean = true
-) : RealmObject()
+open class ScoreModel : RealmObject() {
+    @PrimaryKey
+    var levelNumber: Int = 0
+    var levelScore: Int = 0
+    var thumbnail: Int = 0
+    var isLocked: Boolean = true
+}

@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RatingBar
 import braincrush.mirza.com.braincrush.R
+import braincrush.mirza.com.braincrush.customs.RatingBar
 import braincrush.mirza.com.braincrush.interfaces.LevelSelectionListener
 import braincrush.mirza.com.braincrush.models.ScoreModel
 
@@ -18,7 +18,7 @@ class LevelsCarouselAdapter(private val levelsDataList: ArrayList<ScoreModel>) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val baseContext: ImageView = itemView.findViewById(R.id.baseContext)
         val lockedLevels: View = itemView.findViewById(R.id.lockedLevels)
-        val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
+        val ratingBar: RatingBar = itemView.findViewById(R.id.rating_bar)
 
     }
 
@@ -29,19 +29,17 @@ class LevelsCarouselAdapter(private val levelsDataList: ArrayList<ScoreModel>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
         holder.baseContext.setImageResource(levelsDataList[position].thumbnail)
         if (!levelsDataList[position].isLocked) {
             holder.lockedLevels.visibility = View.GONE
         }
-        holder.ratingBar.rating = levelsDataList[position].levelScore
-
+        holder.ratingBar.setRatingWithoutAnimation(levelsDataList[position].levelScore)
         holder.baseContext.setOnClickListener {
             levelSelectionListener!!.onLevelSelected(position, levelsDataList[position].isLocked)
         }
     }
 
-    override fun getItemCount() = 6
+    override fun getItemCount() = levelsDataList.size
 
     fun setLevelSelectionListener(levelSelectionListener: LevelSelectionListener) {
         this.levelSelectionListener = levelSelectionListener

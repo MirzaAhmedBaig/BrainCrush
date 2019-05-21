@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseContext"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/basic">
+
+    <include
+        android:id="@+id/instructions_view"
+        layout="@layout/before_level_view"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/game_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="7dp"
+            android:max="1000"
+            android:scaleY="1.75"
+            android:theme="@style/AppTheme.WhiteAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resulting_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/round"
+            android:gravity="center"
+            android:text="@string/_89"
+            android:textColor="@color/black"
+            android:textSize="@dimen/extra_big_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_bar" />
+
+
+        <TextView
+            android:id="@+id/expression"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/round"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resulting_number" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expression">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/plus"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="+"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/big_text" />
+
+                <Button
+                    android:id="@+id/minus"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/big_text" />
+
+                <Button
+                    android:id="@+id/multi"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="*"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/big_text" />
+
+                <Button
+                    android:id="@+id/divide"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="/"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/big_text" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button_one"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/normal_text" />
+
+                <Button
+                    android:id="@+id/button_two"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/normal_text" />
+
+                <Button
+                    android:id="@+id/button_three"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/normal_text" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/button_four"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/normal_text" />
+
+                <Button
+                    android:id="@+id/button_five"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/normal_text" />
+
+                <Button
+                    android:id="@+id/button_six"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_weight="1"
+                    android:background="#dddddd"
+                    android:fontFamily="@font/round"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="@color/adapter_text"
+                    android:textSize="@dimen/normal_text" />
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+            <TableRow>
+
+
+                <Button
+                    android:id="@+id/clear_expression"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mybutton"
+                    android:fontFamily="@font/round"
+                    android:text="@string/Reset"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text" />
+
+                <Button
+                    android:id="@+id/check_button"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mybutton"
+                    android:fontFamily="@font/round"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text" />
+
+                <Button
+                    android:id="@+id/undo_button"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mybutton"
+                    android:fontFamily="@font/round"
+                    android:text="@string/undo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/button_text" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        android:id="@+id/error_view"
+        layout="@layout/error_view"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/result_view"
+        layout="@layout/result_view"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/loose_game_view"
+        layout="@layout/loose_game_view"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

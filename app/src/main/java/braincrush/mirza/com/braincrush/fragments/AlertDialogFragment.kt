@@ -73,7 +73,11 @@ class AlertDialogFragment : android.support.v4.app.DialogFragment() {
     }
 
     override fun show(manager: FragmentManager?, tag: String?) {
-        manager?.beginTransaction()?.add(this, tag)?.commitAllowingStateLoss()
+        try {
+            manager?.beginTransaction()?.add(this, tag)?.commitAllowingStateLoss()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
 }

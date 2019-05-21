@@ -1,21 +1,22 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
     <dimen name="dp_120">120dp</dimen>
-    <dimen name="dp_9">9dp</dimen>
     <dimen name="dp_20">20dp</dimen>
-    <dimen name="dp_29">29dp</dimen>
     <dimen name="sp_19">19sp</dimen>
     <dimen name="dp_2">2dp</dimen>
     <dimen name="dp_40">40dp</dimen>
-    <dimen name="dp_32">32</dimen>
     <dimen name="dp_10">10dp</dimen>
     <dimen name="sp_15">15sp</dimen>
-    <dimen name="heading">25sp</dimen>
-    <dimen name="sub_heading">20sp</dimen>
+
+    <dimen name="app_title">40sp</dimen>
     <dimen name="normal_text">18sp</dimen>
+    <dimen name="big_text">25sp</dimen>
+    <dimen name="extra_big_text">30sp</dimen>
     <dimen name="small_text">15sp</dimen>
-    <dimen name="very_small_text">13sp</dimen>
-    <dimen name="big_text">20sp</dimen>
-    <dimen name="very_big_text">25sp</dimen>
-    <dimen name="dp_15">15dp</dimen>
+    <dimen name="extra_small_text">13sp</dimen>
+    <dimen name="button_text">18sp</dimen>
+
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_60">60dp</dimen>
 </resources>

@@ -1,137 +1,268 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/baseContext"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back1"
+    android:background="@drawable/back33"
     tools:context="braincrush.mirza.com.braincrush.activities.MainActivity">
 
-    <RelativeLayout
+    <View
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7fffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/title_container"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp">
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline12">
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/round"
-            android:text="@string/app_name"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="38sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/round"
-            android:text="@string/sub_head"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_back_new">
 
 
-        <Button
-            android:id="@+id/single_player"
-            android:layout_width="165dp"
-            android:layout_height="45dp"
-            android:layout_below="@+id/desc"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/mybutton"
-            android:drawableLeft="@drawable/ic_user"
-            android:drawableStart="@drawable/ic_user"
-            android:fontFamily="@font/round"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp"
-            android:text="@string/single_player"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/round"
+                android:shadowColor="#3b000000"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="8"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/app_title"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/multi_player"
-            android:layout_width="165dp"
-            android:layout_height="45dp"
-            android:layout_below="@+id/single_player"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/mybutton"
-            android:drawableLeft="@drawable/ic_users"
-            android:drawableStart="@drawable/ic_users"
-            android:fontFamily="@font/round"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp"
-            android:text="@string/multi_player"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/settings_btn"
-            android:layout_width="165dp"
-            android:layout_height="45dp"
-            android:layout_below="@+id/multi_player"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/mybutton"
-            android:drawableLeft="@drawable/ic_settings"
-            android:drawableStart="@drawable/ic_settings"
-            android:fontFamily="@font/round"
-            android:paddingEnd="10dp"
-            android:paddingStart="10dp"
-            android:text="@string/settings"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/round"
+                android:shadowColor="#3b000000"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="8"
+                android:text="@string/sub_head"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
 
 
-        <ImageButton
-            android:id="@+id/like_btn"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/settings_btn"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded_view"
-            android:contentDescription="@string/like_button"
-            android:src="@drawable/ic_like" />
+    <ImageButton
+        android:id="@+id/single_player"
+        android:layout_width="250dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/ic_button_back"
+        android:contentDescription="@string/image_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline17" />
 
-        <ImageButton
-            android:id="@+id/share_btn"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_below="@+id/settings_btn"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="45dp"
-            android:background="@drawable/rounded_view"
-            android:contentDescription="@string/share_button"
-            android:src="@drawable/ic_share" />
+    <ImageButton
+        android:id="@+id/multi_player"
+        android:layout_width="250dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/ic_button_back"
+        android:contentDescription="@string/image_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/single_player" />
 
-        <ImageButton
-            android:id="@+id/info_btn"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/settings_btn"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded_view"
-            android:contentDescription="@string/info_button"
-            android:src="@drawable/ic_info" />
-    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/settings_btn"
+        android:layout_width="250dp"
+        android:layout_height="85dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/ic_button_back"
+        android:contentDescription="@string/image_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multi_player" />
+
+    <TextView
+        android:id="@+id/text_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_user"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="@dimen/dp_10"
+        android:fontFamily="@font/round"
+        android:shadowColor="#3b000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="8"
+        android:text="@string/single_player"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="@+id/single_player"
+        app:layout_constraintEnd_toEndOf="@+id/single_player"
+        app:layout_constraintStart_toStartOf="@+id/single_player"
+        app:layout_constraintTop_toTopOf="@+id/single_player" />
+
+    <TextView
+        android:id="@+id/text_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_users"
+        android:drawableLeft="@drawable/ic_users"
+        android:drawablePadding="@dimen/dp_10"
+        android:fontFamily="@font/round"
+        android:shadowColor="#3b000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="8"
+        android:text="@string/multi_player"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="@+id/multi_player"
+        app:layout_constraintEnd_toEndOf="@+id/multi_player"
+        app:layout_constraintStart_toStartOf="@+id/multi_player"
+        app:layout_constraintTop_toTopOf="@+id/multi_player" />
+
+    <TextView
+        android:id="@+id/text_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_settings"
+        android:drawableLeft="@drawable/ic_settings"
+        android:drawablePadding="@dimen/dp_10"
+        android:fontFamily="@font/round"
+        android:shadowColor="#3b000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="8"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_btn"
+        app:layout_constraintEnd_toEndOf="@+id/settings_btn"
+        app:layout_constraintStart_toStartOf="@+id/settings_btn"
+        app:layout_constraintTop_toTopOf="@+id/settings_btn" />
 
 
-</FrameLayout>
+    <ImageButton
+        android:id="@+id/like_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/settings_btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_button_back"
+        android:contentDescription="@string/like_button"
+        android:src="@drawable/ic_like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn" />
+
+    <ImageButton
+        android:id="@+id/share_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/settings_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/ic_button_back"
+        android:contentDescription="@string/share_button"
+        android:src="@drawable/ic_share"
+        app:layout_constraintEnd_toStartOf="@+id/info_btn"
+        app:layout_constraintStart_toEndOf="@+id/like_btn"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn" />
+
+    <ImageButton
+        android:id="@+id/info_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/settings_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_button_back"
+        android:contentDescription="@string/info_button"
+        android:src="@drawable/ic_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_btn" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+</android.support.constraint.ConstraintLayout>

@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import braincrush.mirza.com.braincrush.R
 import braincrush.mirza.com.braincrush.interfaces.CustomAlertDismissListener
-import kotlinx.android.synthetic.main.fragment_game_info.*
+import kotlinx.android.synthetic.main.fragmnet_game_info.*
 
 class GameInfoDialog : android.support.v4.app.DialogFragment() {
 
@@ -23,7 +23,7 @@ class GameInfoDialog : android.support.v4.app.DialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        return inflater.inflate(R.layout.game_info_layout, container, true)
+        return inflater.inflate(R.layout.fragmnet_game_info, container, true)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

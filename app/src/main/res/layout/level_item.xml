@@ -26,76 +26,44 @@
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#2c000000"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_bar"
+        app:layout_constraintEnd_toEndOf="@+id/rating_bar"
+        app:layout_constraintStart_toStartOf="@+id/rating_bar"
+        app:layout_constraintTop_toTopOf="@+id/rating_bar" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+
+    <braincrush.mirza.com.braincrush.customs.RatingBar
+        android:id="@+id/rating_bar"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:background="#2c000000"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline">
-
-        <RelativeLayout
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true">
-
-            <RatingBar
-                android:id="@+id/ratingBar"
-                style="@style/CustomRatingBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
-                android:clickable="false"
-                android:isIndicator="true"
-                android:numStars="5"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:stepSize="1" />
-
-        </RelativeLayout>
-
-
-    </RelativeLayout>
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/baseContext"
+        app:layout_constraintEnd_toEndOf="@+id/baseContext"
+        app:layout_constraintStart_toStartOf="@+id/baseContext" />
 
 
     <FrameLayout
         android:id="@+id/lockedLevels"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:background="#32000000"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/rating_bar"
+        app:layout_constraintEnd_toEndOf="@+id/baseContext"
+        app:layout_constraintStart_toStartOf="@+id/baseContext"
+        app:layout_constraintTop_toTopOf="@+id/baseContext">
 
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="@string/image"
             android:src="@drawable/ic_lock" />
     </FrameLayout>
 

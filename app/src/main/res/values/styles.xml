@@ -9,38 +9,15 @@
 
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
-    <!--<style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/ratingbar</item>
-        <item name="android:minHeight">30dp</item>
-        <item name="android:maxHeight">30dp</item>
-    </style>
-    <style name="CongoRatingBar" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/congo_rating</item>
-        <item name="android:minHeight">80dp</item>
-        <item name="android:maxHeight">80dp</item>
-    </style>-->
+
     <style name="AppTheme.WhiteAccent">
         <item name="colorAccent">@color/black</item> <!-- Whatever color you want-->
     </style>
 
     <style name="DialogStyle" parent="Theme.AppCompat.Dialog.Alert" />
 
-    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/ratingbar</item>
-        <item name="android:minHeight">30dp</item>
-        <item name="android:maxHeight">30dp</item>
-    </style>
 
 </resources>

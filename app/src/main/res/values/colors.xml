@@ -5,10 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="success">#4CAF50</color>
+    <color name="brown">#9B7960</color>
     <color name="warn">#ED8A19</color>
-    <color name="primary">#337ab7</color>
     <color name="basic">#e9e8e8</color>
     <color name="lightText">#333333</color>
-    <color name="transparent">#00ffffff</color>
+    <color name="adapter_text">#505050</color>
+    <color name="sd">#96d354</color>
 </resources>
